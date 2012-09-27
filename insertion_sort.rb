@@ -16,7 +16,7 @@ ARGV.each do|a|
 end
 
 sorted = insertion_sort(numbers)
-puts "sorted sequence in ascending order is "
+puts "sorted sequence using insertion sort is "
 sorted.each do |num|
   print "#{num} "
 end
