@@ -10,9 +10,12 @@ def insertion_sort(numbers)
   numbers
 end
 
-numbers = []
-ARGV.each do|a|
-  numbers << Integer(a)
+puts "enter numbers to be sorted separated by a comma like 1,2,3.."
+numbers = gets
+numbers = numbers.split(',')
+
+numbers.each do |number|
+  numbers[numbers.index(number)] = Integer(number)
 end
 
 sorted = insertion_sort(numbers)
