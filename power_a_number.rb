@@ -1,3 +1,4 @@
+# using Divide and Conquer design strategy
 def power_a_number(base, exponent)
   return 1    if exponent == 0
   return base if exponent == 1
