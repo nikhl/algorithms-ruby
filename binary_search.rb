@@ -1,3 +1,4 @@
+# Takes log(n) time where n is the size of input
 # using Divide and Conquer design strategy
 def binary_search(numbers, key)
   length = numbers.length
