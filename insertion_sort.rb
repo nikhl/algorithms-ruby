@@ -10,7 +10,7 @@ def insertion_sort(numbers)
   numbers
 end
 
-puts "enter numbers to be sorted separated by a comma like 1,2,3.."
+puts "enter numbers to be sorted separated by a comma"
 numbers = gets
 numbers = numbers.split(',')
 
