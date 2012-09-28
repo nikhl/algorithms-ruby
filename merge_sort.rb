@@ -1,3 +1,4 @@
+# Takes nlog(n) time where n is the size of input
 # using Divide and Conquer design strategy
 def merge(left, right)
   length = left.length + right.length

@@ -1,3 +1,4 @@
+# Takes quadratic time where n is the size of input
 def insertion_sort(numbers)
   for j in 1..Integer(numbers.length-1)
      i = j-1
