@@ -3,10 +3,8 @@ def binary_search(numbers, key)
   mid = length/2
   if numbers[mid] == key
     puts "number found at position #{mid+1}"
-    Process.exit
   elsif length == 1
     puts "Key #{key} not found"
-    Process.exit
   elsif  numbers[mid] > key
     binary_search(numbers[0..mid], key)
   elsif numbers[mid] < key
