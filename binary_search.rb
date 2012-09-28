@@ -1,3 +1,4 @@
+# using Divide and Conquer design strategy
 def binary_search(numbers, key)
   length = numbers.length
   mid = (length-1)/2

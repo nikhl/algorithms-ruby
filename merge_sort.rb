@@ -1,3 +1,4 @@
+# using Divide and Conquer design strategy
 def merge(left, right)
   length = left.length + right.length
   sorted = []
