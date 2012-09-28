@@ -1,6 +1,6 @@
 def binary_search(numbers, key)
   length = numbers.length
-  mid = length/2
+  mid = (length-1)/2
   if numbers[mid] == key
     puts "number found at position #{mid+1}"
   elsif length == 1
