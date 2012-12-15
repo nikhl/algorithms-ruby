@@ -1,22 +1,15 @@
 # Takes nlog(n) time where n is the size of input
 # using Divide and Conquer design strategy
 def merge(left, right)
-  length = left.length + right.length
-  sorted = []
-  while sorted.length != length do
-    if left.length == 0
-      sorted = (sorted << right).flatten
-    elsif right.length == 0
-      sorted = (sorted << left).flatten
-    elsif left[0] > right[0]
-      sorted << right[0]
-      right.shift
-    else
-      sorted << left[0]
-      left.shift
-    end
+  if left.length == 0
+    right
+  elsif right.length == 0
+    left
+  elsif left[0] > right[0]
+    [right.first] + merge(left, right[1..-1])
+  else
+    [left.first] + merge(left[1..-1], right)
   end
-  sorted
 end
 
 def merge_sort(numbers)
@@ -24,8 +17,9 @@ def merge_sort(numbers)
   if length == 1
     sorted = numbers
   else
-    left   = merge_sort(numbers[0..(length-1)/2])
-    right  = merge_sort(numbers[((length-1)/2+1)..-1])
+    mid    = (length-1)/2
+    left   = merge_sort(numbers[0..mid])
+    right  = merge_sort(numbers[(mid+1)..-1])
     sorted = merge(left, right)
   end
   sorted
